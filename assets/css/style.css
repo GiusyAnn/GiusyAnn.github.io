@@ -139,7 +139,8 @@ h6 {
   color: rgb(var(--bs-primary-rgb));
   border-radius: 100%;
   font-size: 1.5rem;
-  margin-right: 1.5rem;
+  margin-right: 1.2rem;
+  margin-bottom: 1rem;
 }
 .social-icons .social-icon:last-child {
   margin-right: 0;
@@ -574,7 +575,7 @@ section {
   border: 1px solid rgba(var(--bs-thirdhover-rgb));
   text-align: center;
   color: rgb(var(--bs-third-rgb));
-  margin-right: 20px;
+  margin-right: 10px;
   margin-left: 10px;
   margin-top: 20px;
 }
