@@ -38,11 +38,11 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 128, 54, 57;
-  --bs-secondary-rgb: 151, 75, 62;
-  --bs-sechover-rgb: 255, 247, 241;
-  --bs-third-rgb: 187,126,93;
-  --bs-thirdhover-rgb: 198, 167, 143;
+  --bs-primary-rgb: 34, 69, 97;
+  --bs-secondary-rgb: 0, 96, 141;
+  --bs-sechover-rgb: 239, 239, 242;
+  --bs-third-rgb: 28, 115, 166;
+  --bs-thirdhover-rgb: 28, 115, 166;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
   --bs-warning-rgb: 255, 193, 7;
@@ -51,8 +51,8 @@
   --bs-dark-rgb: 33, 37, 41;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
-  --bs-body-color-rgb: 33, 37, 41;
-  --bs-body-bg-rgb: 255, 255, 255;
+  --bs-body-color-rgb: 239, 239, 242;
+  --bs-body-bg-rgb: 239, 239, 242;
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
@@ -61,7 +61,7 @@
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
-  --bs-body-bg: #FFF7F1;
+  --bs-body-bg: #EFEFF2;
 }
 /*--------------------------------------------------------------
 # General
@@ -271,7 +271,7 @@ h6 {
 .nav-menu .active:focus,
 .nav-menu li:hover>a {
   text-decoration: none;
-  color: rgba(var(--bs-thirdhover-rgb));
+  color: rgba(var(--bs-sechover-rgb));
 }
 
 .nav-menu a:hover i,
@@ -317,7 +317,7 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg.jpg") top center;
+  background: url("../img/hero-bg3.png") top center;
   background-size: cover;
 }
 
@@ -541,7 +541,7 @@ section {
 }
 
 .skills .progress-bar-wrap {
-  background: #dce8f8;
+  /*background: #dce8f8; */
   height: 10px;
 }
 
@@ -1241,6 +1241,6 @@ section {
 }
 
 #footer a:hover {
-  color: #C6A78F;
+  color: rgb(var(--bs-third-rgb));
   text-decoration: none;
 }
