@@ -91,6 +91,16 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
+.btn-primary {
+  background-color: rgb(var(--bs-primary-rgb)) !important;
+  border-color: rgb(var(--bs-primary-rgb)) !important;
+}
+
+.btn-primary:hover {
+  background-color: rgba(var(--bs-primary-rgb), 0.8) !important; /* Leggermente più chiaro al passaggio del mouse */
+  border-color: rgba(var(--bs-primary-rgb), 0.8) !important;
+}
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -1200,6 +1210,27 @@ section {
     display: inline-block;
   }
 }
+
+.card {
+  height: 100%; /* Fa sì che tutte le card abbiano la stessa altezza */
+  display: flex;
+  flex-direction: column;
+}
+
+.card-img-top {
+  width: 100%; /* Mantiene la larghezza fissa */
+  height: 200px !important; /* FORZA tutte le immagini ad avere la stessa altezza */
+  object-fit: cover; /* Taglia l'immagine per riempire lo spazio senza distorsioni */
+  object-position: top; /* Assicura che l'immagine parta dall'alto */
+}
+
+.card-body {
+  flex-grow: 1; /* Fa espandere il contenuto per riempire lo spazio */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 
 /*--------------------------------------------------------------
 # Footer
