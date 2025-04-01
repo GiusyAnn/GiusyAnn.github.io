@@ -72,6 +72,122 @@ body {
   color: #272829;
 }
 
+/* Badge personalizzati per le categorie di papers */
+.badge-conference {
+  background-color: rgb(var(--bs-thirdhover-rgb)) !important;
+  color: #fff !important;
+}
+
+.badge-journal {
+  background-color: rgb(var(--bs-primary-rgb))  !important;
+  color: #fff !important;
+}
+
+.badge-workshop {
+  background-color: #37b3ed !important;
+  color: #fff !important;
+}
+
+
+/* Timeline styling */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Ripristino la linea verticale con il colore primary */
+.timeline:before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: rgb(var(--bs-primary-rgb)) !important;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+  z-index: 0;
+}
+
+/* Il resto dello stile rimane invariato */
+.timeline-item {
+  padding: 10px 40px;
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+
+.timeline-item:after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid rgb(var(--bs-primary-rgb)) !important;
+  top: 15px;
+  z-index: 1;
+}
+
+/* Elementi a sinistra */
+.timeline-left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-left:after {
+  right: -8px;
+}
+
+/* Elementi a destra */
+.timeline-right {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-right:after {
+  left: -8px;
+}
+
+/* Stile per i titoli delle conferenze */
+.timeline-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+/* Stile per le date e luoghi */
+.timeline-date {
+  color: rgb(var(--bs-secondary-rgb));
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.timeline-location {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+/* Stile per la descrizione */
+.timeline-description {
+  margin-bottom: 0;
+}
+
+/* Badge per le categorie */
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.6em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+}
+
+
 a {
   color: #149ddd;
   text-decoration: none;
@@ -1222,6 +1338,12 @@ section {
   height: 200px !important; /* FORZA tutte le immagini ad avere la stessa altezza */
   object-fit: cover; /* Taglia l'immagine per riempire lo spazio senza distorsioni */
   object-position: top; /* Assicura che l'immagine parta dall'alto */
+}
+.card-img-top object,
+.card-img-top embed {
+  width: 100%;
+  height: 200px; /* o l'altezza che preferisci */
+  object-fit: contain;
 }
 
 .card-body {
