@@ -31,6 +31,123 @@
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- Stile personalizzato per uniformare le card -->
+    <style>
+        .card-title {
+            height: 60px; /* Ridotto da 80px a 60px */
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            margin-bottom: 8px; /* Ridotto ulteriormente lo spazio dopo il titolo */
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            height: 180px; /* Ridotto da 200px a 180px */
+            padding-top: 15px; /* Ridotto il padding superiore */
+            padding-bottom: 10px; /* Ridotto ulteriormente il padding inferiore */
+        }
+
+        .card-text {
+            margin-top: auto; /* Ridotto ulteriormente lo spazio sotto il testo */
+        }
+
+        .portfolio-item .card {
+            height: 100%;
+        }
+
+        /* Stile per il contenitore PDF */
+        .pdf-container {
+            height: 200px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            background-color: #fff; /* Cambiato da #f5f5f5 a bianco */
+        }
+
+        .pdf-preview {
+            width: 110%;
+            height: 450px;
+            margin-top: -60px;
+            margin-left: -5%;
+            border: none;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        /* Manteniamo lo stile per le immagini esistenti */
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        /* Riduciamo lo spazio tra gli elementi nel card-text */
+        .card-text small, .card-text span {
+            vertical-align: middle;
+        }
+
+        /* Riduciamo lo spazio sopra il pulsante */
+        .btn.mt-2 {
+            margin-top: 5px !important;
+        }
+
+        /* Stile per il contenitore PDF */
+        .pdf-container {
+            height: 200px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            background-color: #fff;
+            pointer-events: none; /* Disabilita interattività anche sul contenitore */
+        }
+
+        /* Stile per l'embed PDF */
+        .pdf-preview {
+            width: 110%;
+            height: 450px;
+            margin-top: -60px;
+            margin-left: -5%;
+            border: none;
+            pointer-events: none !important;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        /* Aggiungiamo un overlay trasparente per bloccare qualsiasi interazione */
+        .pdf-container {
+            height: 200px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            background-color: #fff;
+            pointer-events: none !important;
+        }
+
+        .pdf-container::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            background-color: transparent;
+            pointer-events: none;
+        }
+
+        /* Stile per l'immagine di anteprima PDF */
+        .pdf-preview-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top; /* Mostra la parte superiore dell'immagine */
+        }
+    </style>
 </head>
 
 <body>
@@ -63,15 +180,26 @@
 
                 <!-- Card EASE -->
                 <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-sort-order="8">
-                    <div class="card shadow-sm">
-                        <img src="assets/img/EASE25.png" class="card-img-top fixed-img" alt="EASE">
-                        <div class="card-body">
+                    <div class="card h-100 shadow-sm">
+                        <!-- Card EASE -->
+                        <div class="pdf-container">
+                            <embed
+                                    src="assets/pdf/EASE25.pdf#toolbar=0&navpanes=0&scrollbar=0&statusbar=0&messages=0&view=FitH"
+                                    type="application/pdf"
+                                    class="pdf-preview"
+                                    frameborder="0"
+                                    scrolling="no"
+                                    wmode="transparent">
+                            </embed>
+                        </div>
+                        <div class="card-body d-flex flex-column">
                             <h6 class="card-title">How Do Communities of ML-Enabled Systems Smell? A Cross-Sectional Study on the Prevalence of Community Smells</h6>
-                            <p class="card-text">
+                            <p class="card-text mt-auto">
                                 <small class="text-muted">EASE 2025</small>
-                                <span class="badge badge-conference ms-2">C5</span>
+                                <span class="badge badge-conference ms-2">C5</span><br>
+                                <small class="text-muted">29th International Conference on Evaluation and Assessment in Software Engineering</small>
                             </p>
-                            <a href="docsym.html" class="btn btn-primary btn-sm" target="_blank">
+                            <a href="assets/pdf/EASE25.pdf" class="btn btn-primary btn-sm mt-2" target="_blank">
                                 <i class="bx bx-file"></i> View PDF
                             </a>
                         </div>
@@ -80,15 +208,26 @@
 
                 <!-- Card TOSEM -->
                 <div class="col-lg-4 col-md-6 portfolio-item filter-card" data-sort-order="7">
-                    <div class="card shadow-sm">
-                        <img src="assets/img/TOSEM.png" class="card-img-top fixed-img" alt="TOSEM">
-                        <div class="card-body">
+                    <div class="card h-100 shadow-sm">
+                        <!-- Card TOSEM -->
+                        <div class="pdf-container">
+                            <embed
+                                    src="assets/pdf/TOSEM.pdf"
+                                    type="application/pdf"
+                                    class="pdf-preview"
+                                    frameborder="0"
+                                    scrolling="no"
+                                    wmode="transparent">
+                            </embed>
+                        </div>
+                        <div class="card-body d-flex flex-column">
                             <h6 class="card-title">Uncovering Community Smells in ML-Enabled Systems</h6>
-                            <p class="card-text">
+                            <p class="card-text mt-auto">
                                 <small class="text-muted">TOSEM</small>
-                                <span class="badge badge-journal ms-2">J1</span>
+                                <span class="badge badge-journal ms-2">J1</span><br>
+                                <small class="text-muted">ACM Transactions on Software Engineering and Methodology</small>
                             </p>
-                            <a href="tosem.html" class="btn btn-primary btn-sm" target="_blank">
+                            <a href="assets/pdf/TOSEM.pdf" class="btn btn-primary btn-sm mt-2" target="_blank">
                                 <i class="bx bx-file"></i> View PDF
                             </a>
                         </div>
@@ -97,15 +236,24 @@
 
                 <!-- Card SEAA -->
                 <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-sort-order="6">
-                    <div class="card shadow-sm">
-                        <img src="assets/img/SEAA24.png" class="card-img-top fixed-img" alt="SEAA">
-                        <div class="card-body">
+                    <div class="card h-100 shadow-sm">
+                        <div class="pdf-container">
+                            <embed
+                                    src="assets/pdf/SEAA2024.pdf"
+                                    type="application/pdf"
+                                    class="pdf-preview"
+                                    frameborder="0"
+                                    scrolling="no">
+                            </embed>
+                        </div>
+                        <div class="card-body d-flex flex-column">
                             <h6 class="card-title">An Empirical Study on the Relation between Programming Languages and the Emergence of Community Smells</h6>
-                            <p class="card-text">
+                            <p class="card-text mt-auto">
                                 <small class="text-muted">SEAA 2024 </small>
-                                <span class="badge badge-conference ms-2">C4</span>
+                                <span class="badge badge-conference ms-2">C4</span><br>
+                                <small class="text-muted">50th Euromicro Conference on Software Engineering and Advanced Applications</small>
                             </p>
-                            <a href="docsym.html" class="btn btn-primary btn-sm" target="_blank">
+                            <a href="assets/pdf/SEAA2024.pdf" class="btn btn-primary btn-sm mt-2" target="_blank">
                                 <i class="bx bx-file"></i> View PDF
                             </a>
                         </div>
@@ -114,15 +262,24 @@
 
                 <!-- Card ICSE-SEET -->
                 <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-sort-order="5">
-                    <div class="card shadow-sm">
-                        <img src="assets/img/SERGE.png" class="card-img-top" alt="SERGE">
-                        <div class="card-body">
+                    <div class="card h-100 shadow-sm">
+                        <div class="pdf-container">
+                            <embed
+                                    src="assets/pdf/Pre-Print-SERGE.pdf"
+                                    type="application/pdf"
+                                    class="pdf-preview"
+                                    frameborder="0"
+                                    scrolling="no">
+                            </embed>
+                        </div>
+                        <div class="card-body d-flex flex-column">
                             <h6 class="card-title">SERGE—Serious Game for the Education of Risk Management in Software Project Management</h6>
-                            <p class="card-text">
+                            <p class="card-text mt-auto">
                                 <small class="text-muted">ICSE-SEET 2024</small>
-                                <span class="badge badge-conference ms-2">C3</span>
+                                <span class="badge badge-conference ms-2">C3</span><br>
+                                <small class="text-muted">46th International Conference of Software Engineering</small>
                             </p>
-                            <a href="serge.html" class="btn btn-primary btn-sm" target="_blank">
+                            <a href="assets/pdf/Pre-Print-SERGE.pdf" class="btn btn-primary btn-sm mt-2" target="_blank">
                                 <i class="bx bx-file"></i> View PDF
                             </a>
                         </div>
@@ -131,15 +288,24 @@
 
                 <!-- Card SECUTE -->
                 <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-sort-order="4">
-                    <div class="card shadow-sm">
-                        <img src="assets/img/SEC.png" class="card-img-top fixed-img" alt="SEC">
-                        <div class="card-body">
+                    <div class="card h-100 shadow-sm">
+                        <div class="pdf-container">
+                            <embed
+                                    src="assets/pdf/SECUTE.pdf"
+                                    type="application/pdf"
+                                    class="pdf-preview"
+                                    frameborder="0"
+                                    scrolling="no">
+                            </embed>
+                        </div>
+                        <div class="card-body d-flex flex-column">
                             <h6 class="card-title">Security Risk Assessment on Cloud</h6>
-                            <p class="card-text">
+                            <p class="card-text mt-auto">
                                 <small class="text-muted">EASE 2024 · SECUTE 2024</small>
-                                <span class="badge badge-workshop ms-2">WS2</span>
+                                <span class="badge badge-workshop ms-2">WS2</span><br>
+                                <small class="text-muted">28th International Conference on Evaluation and Assessment in Software Engineering</small>
                             </p>
-                            <a href="secute.html" class="btn btn-primary btn-sm" target="_blank">
+                            <a href="assets/pdf/SECUTE.pdf" class="btn btn-primary btn-sm mt-2" target="_blank">
                                 <i class="bx bx-file"></i> View PDF
                             </a>
                         </div>
@@ -148,15 +314,24 @@
 
                 <!-- Card Doctoral Symposium -->
                 <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-sort-order="3">
-                    <div class="card shadow-sm">
-                        <img src="assets/img/DS.png" class="card-img-top fixed-img" alt="DS">
-                        <div class="card-body">
+                    <div class="card h-100 shadow-sm">
+                        <div class="pdf-container">
+                            <embed
+                                    src="assets/pdf/Doctoral_Symposium.pdf"
+                                    type="application/pdf"
+                                    class="pdf-preview"
+                                    frameborder="0"
+                                    scrolling="no">
+                            </embed>
+                        </div>
+                        <div class="card-body d-flex flex-column">
                             <h6 class="card-title">Adapting to Change: Software Project Management</h6>
-                            <p class="card-text">
+                            <p class="card-text mt-auto">
                                 <small class="text-muted">EASE 2024 · Doctoral Symposium</small>
-                                <span class="badge badge-conference ms-2">C2</span>
+                                <span class="badge badge-conference ms-2">C2</span><br>
+                                <small class="text-muted">28th International Conference on Evaluation and Assessment in Software Engineering</small>
                             </p>
-                            <a href="docsym.html" class="btn btn-primary btn-sm" target="_blank">
+                            <a href="assets/pdf/Doctoral_Symposium.pdf" class="btn btn-primary btn-sm mt-2" target="_blank">
                                 <i class="bx bx-file"></i> View PDF
                             </a>
                         </div>
@@ -165,15 +340,16 @@
 
                 <!-- Card MENSURA -->
                 <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-sort-order="2">
-                    <div class="card shadow-sm">
+                    <div class="card h-100 shadow-sm">
                         <img src="assets/img/mensura.png" class="card-img-top fixed-img" alt="MENSURA">
-                        <div class="card-body">
+                        <div class="card-body d-flex flex-column">
                             <h6 class="card-title">Understand Developer Practices & Code Smells</h6>
-                            <p class="card-text">
+                            <p class="card-text mt-auto">
                                 <small class="text-muted">MENSURA 2023</small>
-                                <span class="badge badge-conference ms-2">C1</span>
+                                <span class="badge badge-conference ms-2">C1</span><br>
+                                <small class="text-muted">17th International Conference on Software Process and Product Measurement</small>
                             </p>
-                            <a href="https://ceur-ws.org/Vol-3543/paper18.pdf" class="btn btn-primary btn-sm" target="_blank">
+                            <a href="https://ceur-ws.org/Vol-3543/paper18.pdf" class="btn btn-primary btn-sm mt-2" target="_blank">
                                 <i class="bx bx-file"></i> View PDF
                             </a>
                         </div>
@@ -182,15 +358,16 @@
 
                 <!-- Card SATToSE -->
                 <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-sort-order="1">
-                    <div class="card shadow-sm">
+                    <div class="card h-100 shadow-sm">
                         <img src="assets/img/sattose.png" class="card-img-top fixed-img" alt="SATToSE">
-                        <div class="card-body">
+                        <div class="card-body d-flex flex-column">
                             <h6 class="card-title">How May Deep Learning Testing Inform Model Generalizability?</h6>
-                            <p class="card-text">
+                            <p class="card-text mt-auto">
                                 <small class="text-muted">SATToSE 2023</small>
-                                <span class="badge badge-workshop ms-2">WS1</span>
+                                <span class="badge badge-workshop ms-2">WS1</span><br>
+                                <small class="text-muted">15th Seminar on Advanced Techniques & Tools for Software Evolution</small>
                             </p>
-                            <a href="https://ceur-ws.org/Vol-3483/paper4.pdf" class="btn btn-primary btn-sm" target="_blank">
+                            <a href="https://ceur-ws.org/Vol-3483/paper4.pdf" class="btn btn-primary btn-sm mt-2" target="_blank">
                                 <i class="bx bx-file"></i> View PDF
                             </a>
                         </div>
@@ -240,3 +417,13 @@
 <script src="assets/js/custom-sort.js"></script>
 </body>
 </html>
+
+<!-- Aggiungi questo nella sezione head, prima della chiusura </head> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+<script>
+    // Configura il worker di PDF.js
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
+</script>
+
+
+
