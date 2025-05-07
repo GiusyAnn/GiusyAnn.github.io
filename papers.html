@@ -35,20 +35,19 @@
     <!-- Stile personalizzato per uniformare le card -->
     <style>
         .card-title {
-            height: 60px; /* Ridotto da 80px a 60px */
-            overflow: hidden;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            margin-bottom: 8px; /* Ridotto ulteriormente lo spazio dopo il titolo */
+            min-height: 60px; /* Cambiato da height fisso a min-height */
+            overflow: visible; /* Cambiato da hidden a visible */
+            display: block; /* Rimosso il -webkit-box per permettere il wrap naturale */
+            margin-bottom: 8px;
+            font-size: 0.9rem; /* Aggiunto per migliorare la leggibilità */
+            line-height: 1.4; /* Aggiunto per migliorare la spaziatura */
         }
 
         .card-body {
             display: flex;
             flex-direction: column;
-            height: 180px; /* Ridotto da 200px a 180px */
-            padding-top: 15px; /* Ridotto il padding superiore */
-            padding-bottom: 10px; /* Ridotto ulteriormente il padding inferiore */
+            min-height: 180px; /* Cambiato da height fisso a min-height */
+            padding: 15px 15px 10px; /* Unificato il padding */
         }
 
         .card-text {
@@ -101,14 +100,14 @@
             overflow: hidden;
             position: relative;
             background-color: #fff;
-            pointer-events: none; /* Disabilita interattività anche sul contenitore */
+            pointer-events: none;
         }
 
         /* Stile per l'embed PDF */
         .pdf-preview {
             width: 110%;
             height: 450px;
-            margin-top: -60px;
+            margin-top: -35px; /* Modificato da -60px a 0 */
             margin-left: -5%;
             border: none;
             pointer-events: none !important;
@@ -116,6 +115,8 @@
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
+            transform: scale(1.1); /* Aggiunto per zoom leggermente il PDF */
+            transform-origin: top center; /* Assicura che lo zoom parta dall'alto */
         }
 
         /* Aggiungiamo un overlay trasparente per bloccare qualsiasi interazione */
@@ -305,7 +306,7 @@
                                 <span class="badge badge-workshop ms-2">WS2</span><br>
                                 <small class="text-muted">28th International Conference on Evaluation and Assessment in Software Engineering</small>
                             </p>
-                            <a href="assets/pdf/SECUTE.pdf" class="btn btn-primary btn-sm mt-2" target="_blank">
+                            <a href="assets/pdf/Secute.pdf" class="btn btn-primary btn-sm mt-2" target="_blank">
                                 <i class="bx bx-file"></i> View PDF
                             </a>
                         </div>
