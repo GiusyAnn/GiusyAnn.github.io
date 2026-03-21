@@ -78,6 +78,11 @@ body {
   color: #fff !important;
 }
 
+.badge-ur {
+  background-color: #495057 !important;
+  color: #fff !important;
+}
+
 .badge-journal {
   background-color: rgb(var(--bs-primary-rgb))  !important;
   color: #fff !important;

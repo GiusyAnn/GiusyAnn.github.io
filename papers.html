@@ -165,23 +165,49 @@
                 <h2>Papers</h2>
                 <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
             </div>
-            <!-- Portfolio: Conference = filter-app - Journal = filter-card Workshop = filter-web-->
+            <!-- Portfolio: Conference = filter-conference - Journal = filter-journal Workshop = filter-ws-->
             <div class="row" data-aos="fade-up">
                 <div class="col-lg-12 d-flex justify-content-center">
                     <ul id="portfolio-flters">
                         <li data-filter="*" class="filter-active">All</li>
-                        <li data-filter=".filter-app">Conference</li>
-                        <li data-filter=".filter-card">Journal</li>
-                        <li data-filter=".filter-web">Workshop</li>
-                        <li data-filter=".filter-UR">Under Review</li>
+                        <li data-filter=".filter-conference">Conference</li>
+                        <li data-filter=".filter-journal">Journal</li>
+                        <li data-filter=".filter-ws">Workshop</li>
+                        <li data-filter=".filter-ur">Under Review</li>
                     </ul>
                 </div>
             </div>
 
-            <div id="c5" class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+            <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+
+                <!-- Card JSS -->
+                <div id="ur1" class="col-lg-4 col-md-6 portfolio-item filter-ur" data-sort-order="9">
+                    <div class="card h-100 shadow-sm">
+                        <div class="pdf-container">
+                            <embed
+                                    src="assets/pdf/JSS.pdf"
+                                    type="application/pdf"
+                                    class="pdf-preview"
+                                    frameborder="0"
+                                    scrolling="no">
+                            </embed>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="card-title">How Do Communities of ML-Enabled Systems Smell Over Time? A Longitudinal Exploration of Community Smells in ML-Enabled Systems</h6>
+                            <p class="card-text mt-auto"> </br>
+                                <small class="text-muted">Under Review</small>
+                                <span class="badge badge-ur ms-2">UR</span><br>
+                                <small class="text-muted">First Submission</small>
+                            </p>
+                            <a href="assets/pdf/JSS.pdf" class="btn btn-primary btn-sm mt-2" target="_blank">
+                                <i class="bx bx-file"></i> View PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- Card EASE -->
-                <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-sort-order="8">
+                <div id="c5" class="col-lg-4 col-md-6 portfolio-item filter-conference" data-sort-order="8">
                     <div class="card h-100 shadow-sm">
                         <!-- Card EASE -->
                         <div class="pdf-container">
@@ -209,7 +235,7 @@
                 </div>
 
                 <!-- Card TOSEM -->
-                <div id="j1" class="col-lg-4 col-md-6 portfolio-item filter-card" data-sort-order="7">
+                <div id="j1" class="col-lg-4 col-md-6 portfolio-item filter-journal" data-sort-order="7">
                     <div class="card h-100 shadow-sm">
                         <!-- Card TOSEM -->
                         <div class="pdf-container">
@@ -237,7 +263,7 @@
                 </div>
 
                 <!-- Card SEAA -->
-                <div id="c4" class="col-lg-4 col-md-6 portfolio-item filter-app" data-sort-order="6">
+                <div id="c4" class="col-lg-4 col-md-6 portfolio-item filter-conference" data-sort-order="6">
                     <div class="card h-100 shadow-sm">
                         <div class="pdf-container">
                             <embed
@@ -263,7 +289,7 @@
                 </div>
 
                 <!-- Card ICSE-SEET -->
-                <div id="c3" class="col-lg-4 col-md-6 portfolio-item filter-app" data-sort-order="5">
+                <div id="c3" class="col-lg-4 col-md-6 portfolio-item filter-conference" data-sort-order="5">
                     <div class="card h-100 shadow-sm">
                         <div class="pdf-container">
                             <embed
@@ -289,7 +315,7 @@
                 </div>
 
                 <!-- Card SECUTE -->
-                <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-sort-order="4">
+                <div id="ws2" class="col-lg-4 col-md-6 portfolio-item filter-ws" data-sort-order="4">
                     <div class="card h-100 shadow-sm">
                         <div class="pdf-container">
                             <embed
@@ -316,7 +342,7 @@
 
 
                 <!-- Card Doctoral Symposium -->
-                <div class="col-zlg-4 col-md-6 portfolio-item filter-app" data-sort-order="3">
+                <div id="c2" class="col-lg-4 col-md-6 portfolio-item filter-conference" data-sort-order="3">
                     <div class="card h-100 shadow-sm">
                         <div class="pdf-container">
                             <embed
@@ -341,8 +367,9 @@
                     </div>
                 </div>
 
+
                 <!-- Card MENSURA -->
-                <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-sort-order="2">
+                <div id="c1" class="col-lg-4 col-md-6 portfolio-item filter-conference" data-sort-order="2">
                     <div class="card h-100 shadow-sm">
                         <img src="assets/img/mensura.png" class="card-img-top fixed-img" alt="MENSURA">
                         <div class="card-body d-flex flex-column">
@@ -360,7 +387,7 @@
                 </div>
 
                 <!-- Card SATToSE -->
-                <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-sort-order="1">
+                <div id="ws1" class="col-lg-4 col-md-6 portfolio-item filter-ws" data-sort-order="1">
                     <div class="card h-100 shadow-sm">
                         <img src="assets/img/sattose.png" class="card-img-top fixed-img" alt="SATToSE">
                         <div class="card-body d-flex flex-column">
