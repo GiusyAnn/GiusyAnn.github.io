@@ -93,6 +93,15 @@ body {
   color: #fff !important;
 }
 
+.custom-list {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.custom-list li::before {
+  content: "• ";
+  margin-right: 5px;
+}
 
 /* Timeline styling */
 .timeline {
@@ -177,6 +186,14 @@ body {
 /* Stile per la descrizione */
 .timeline-description {
   margin-bottom: 0;
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-left: 15px;
+  margin-right: 25px;
 }
 
 /* Badge per le categorie */
